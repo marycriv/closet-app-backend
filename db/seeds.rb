@@ -7,8 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts "✧ destroying all users & items ✧"
+Outfit.destroy_all
+OutfitItem.destroy_all
 Item.destroy_all
 User.destroy_all
+
 puts "✧ destruction complete ✧"
 
 puts "✧ creating new users ✧"
@@ -28,3 +31,16 @@ i4 = Item.create(user_id: u2.id, image: 'https://d2h1pu99sxkfvn.cloudfront.net/b
 
 i5 = Item.create(user_id: u2.id, image: 'https://d2h1pu99sxkfvn.cloudfront.net/b0/6657695/544708812_XVP5Mjscte/P0.jpg', classification: 'top', brand: 'chanel')
 puts "✧ items have been created ✧"
+
+
+puts "✧ creating outfits ✧"
+o1 = Outfit.create(name: "outfit one")
+o2 = Outfit.create(name: "outfit two")
+puts "✧ outfits have been created ✧"
+
+puts "✧ creating outfit items ✧"
+oi1 = OutfitItem.create(outfit_id: o1.id, item_id: i1.id)
+oi2 = OutfitItem.create(outfit_id: o1.id, item_id: i2.id)
+oi3 = OutfitItem.create(outfit_id: o2.id, item_id: i4.id)
+oi4 = OutfitItem.create(outfit_id: o2.id, item_id: i5.id)
+puts "✧ outfit items have been created ✧"
