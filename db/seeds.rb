@@ -18,13 +18,13 @@ u2 = User.create(username: 'blair', profile_picture: 'https://66.media.tumblr.co
 puts "✧ users have been created ✧"
 
 puts "✧ creating new items ✧"
-i1 = Item.create(user_id: 1, image: 'https://d2h1pu99sxkfvn.cloudfront.net/b0/153222/537655448_7mwvWMfaHr/P0.jpg', classification: 'bottom', brand: 'topshop')
+i1 = Item.create(user_id: u1.id, image: 'https://d2h1pu99sxkfvn.cloudfront.net/b0/153222/537655448_7mwvWMfaHr/P0.jpg', classification: 'bottom', brand: 'topshop')
 
-i2 = Item.create(user_id: 1, image: 'https://d2h1pu99sxkfvn.cloudfront.net/b0/153222/537663017_kOQiDn7H2K/P0.jpg', classification: 'top', brand: 'miss selfridge')
+i2 = Item.create(user_id: u1.id, image: 'https://d2h1pu99sxkfvn.cloudfront.net/b0/153222/537663017_kOQiDn7H2K/P0.jpg', classification: 'top', brand: 'miss selfridge')
 
-i3 = Item.create(user_id: 1, image: 'https://d2h1pu99sxkfvn.cloudfront.net/b0/153222/465366496_oisLQ2XBev/P0.jpg', classification: 'bottoms', brand: 'abbot lyon')
+i3 = Item.create(user_id: u1.id, image: 'https://d2h1pu99sxkfvn.cloudfront.net/b0/153222/465366496_oisLQ2XBev/P0.jpg', classification: 'bottoms', brand: 'abbot lyon')
 
-i4 = Item.create(user_id: 2, image: 'https://d2h1pu99sxkfvn.cloudfront.net/b0/176938/474972232_geYZaL14s6/P0.jpg', classification: 'bottom', brand: 'msgm')
+i4 = Item.create(user_id: u2.id, image: 'https://d2h1pu99sxkfvn.cloudfront.net/b0/176938/474972232_geYZaL14s6/P0.jpg', classification: 'bottom', brand: 'msgm')
 
-i5 = Item.create(user_id: 2, image: 'https://d2h1pu99sxkfvn.cloudfront.net/b0/6657695/544708812_XVP5Mjscte/P0.jpg', classification: 'top', brand: 'chanel')
+i5 = Item.create(user_id: u2.id, image: 'https://d2h1pu99sxkfvn.cloudfront.net/b0/6657695/544708812_XVP5Mjscte/P0.jpg', classification: 'top', brand: 'chanel')
 puts "✧ items have been created ✧"
