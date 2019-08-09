@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts "✧ destroying all users & items ✧"
-User.destroy_all
 Item.destroy_all
+User.destroy_all
 puts "✧ destruction complete ✧"
 
 puts "✧ creating new users ✧"
@@ -22,7 +22,7 @@ i1 = Item.create(user_id: u1.id, image: 'https://d2h1pu99sxkfvn.cloudfront.net/b
 
 i2 = Item.create(user_id: u1.id, image: 'https://d2h1pu99sxkfvn.cloudfront.net/b0/153222/537663017_kOQiDn7H2K/P0.jpg', classification: 'top', brand: 'miss selfridge')
 
-i3 = Item.create(user_id: u1.id, image: 'https://d2h1pu99sxkfvn.cloudfront.net/b0/153222/465366496_oisLQ2XBev/P0.jpg', classification: 'bottoms', brand: 'abbot lyon')
+i3 = Item.create(user_id: u1.id, image: 'https://d2h1pu99sxkfvn.cloudfront.net/b0/153222/465366496_oisLQ2XBev/P0.jpg', classification: 'bottom', brand: 'abbot lyon')
 
 i4 = Item.create(user_id: u2.id, image: 'https://d2h1pu99sxkfvn.cloudfront.net/b0/176938/474972232_geYZaL14s6/P0.jpg', classification: 'bottom', brand: 'msgm')
 
