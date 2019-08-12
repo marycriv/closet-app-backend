@@ -34,8 +34,8 @@ puts "✧ items have been created ✧"
 
 
 puts "✧ creating outfits ✧"
-o1 = Outfit.create(name: "outfit one")
-o2 = Outfit.create(name: "outfit two")
+o1 = Outfit.create(name: "outfit one", user_id: u1.id)
+o2 = Outfit.create(name: "outfit two", user_id: u2.id)
 puts "✧ outfits have been created ✧"
 
 puts "✧ creating outfit items ✧"
