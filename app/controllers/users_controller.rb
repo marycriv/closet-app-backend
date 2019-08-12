@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+  skip_before_action :verify_authenticity_token
+
   def index
     @users = User.all
     render json: @users
@@ -38,5 +40,5 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:username, :profile_picture)
   end
-  
+
 end

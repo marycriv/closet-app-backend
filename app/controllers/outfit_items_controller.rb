@@ -1,5 +1,7 @@
 class OutfitItemsController < ApplicationController
 
+  skip_before_action :verify_authenticity_token
+
   def index
     @outfit_items = OutfitItem.all
     render json: @outfit_items
