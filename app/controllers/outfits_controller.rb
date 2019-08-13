@@ -12,17 +12,19 @@ class OutfitsController < ApplicationController
     render json: @outfit
   end
 
-  def new
-    @outfit = Outfit.new
-  end
-
   def create
-    @outfit = Outfit.find_or_create_by(outfit_params)
-    render json: @outfit.to_json
-  end
-
-  def edit
-    @outfit = Outfit.find(params[:id])
+    outfit = Outfit.new(outfit_params)
+    if outfit.save
+      OutfitItem.create(
+        [
+          {outfit_id: outfit.id,
+          item_id: params[:topId]},
+          {outfit_id: outfit.id,
+          item_id: params[:bottomId]}
+        ]
+      )
+    end
+    render json: outfit.to_json
   end
 
   def update
