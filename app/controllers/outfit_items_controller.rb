@@ -18,7 +18,7 @@ class OutfitItemsController < ApplicationController
 
   def create
     @outfit_item = OutfitItem.find_or_create_by(outfititem_params)
-    render json: @outfit_item
+    render json: @outfit_item.to_json
   end
 
   def edit
@@ -33,7 +33,7 @@ class OutfitItemsController < ApplicationController
 
   private
 
-  def outfit_params
-    params.require(:outfit).permit(:name)
+  def outfititem_params
+    params.require(:outfit_item).permit(:outfit_id, :item_id)
   end
 end

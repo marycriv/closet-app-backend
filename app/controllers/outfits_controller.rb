@@ -18,7 +18,7 @@ class OutfitsController < ApplicationController
 
   def create
     @outfit = Outfit.find_or_create_by(outfit_params)
-    render json: @outfit
+    render json: @outfit.to_json
   end
 
   def edit
