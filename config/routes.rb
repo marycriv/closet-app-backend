@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :items
   resources :outfits
   resources :outfit_items
+  resources :follows
 end
