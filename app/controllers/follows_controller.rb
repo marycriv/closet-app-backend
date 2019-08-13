@@ -1,4 +1,7 @@
-class FollowsController < ActionController::API
+class FollowsController < ApplicationController
+  
+  skip_before_action :verify_authenticity_token
+
   def index
     follows = Follow.all
     render json: follows
@@ -31,6 +34,6 @@ class FollowsController < ActionController::API
   private
 
   def follow_params
-    params.require(:follow).permit(:follower_id, :followee_id, :status)
+    params.require(:follow).permit(:follower_id, :followee_id)
   end
 end
