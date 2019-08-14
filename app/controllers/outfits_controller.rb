@@ -20,7 +20,9 @@ class OutfitsController < ApplicationController
           {outfit_id: outfit.id,
           item_id: params[:topId]},
           {outfit_id: outfit.id,
-          item_id: params[:bottomId]}
+          item_id: params[:bottomId]},
+          {outfit_id: outfit.id,
+          item_id: params[:shoesId]}
         ]
       )
     end

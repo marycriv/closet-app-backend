@@ -1,29 +1,8 @@
 # README
 
-This is a fashion-based social media platform that allows users to catalog their personal style collection.
+Rails backend for Cher, a fashion app for people with no sense of style. Front end written in React.
 
-Made with Rails & React.
+Made with:
+* ruby 2.6.3p62
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-- ruby 2.6.3p62
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To get it up and running, fork both this repo, and the front end repo. In your terminal, "bundle install" and run "rails s" in the backend directory, and run "npm start" in the front end directory. Your backend will be on port 3001, and your front end will be on port 3000. 
