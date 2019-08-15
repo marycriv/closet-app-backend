@@ -15,16 +15,7 @@ class OutfitsController < ApplicationController
   def create
     outfit = Outfit.new(outfit_params)
     if outfit.save
-      OutfitItem.create(
-        [
-          {outfit_id: outfit.id,
-          item_id: params[:topId]},
-          {outfit_id: outfit.id,
-          item_id: params[:bottomId]},
-          {outfit_id: outfit.id,
-          item_id: params[:shoesId]}
-        ]
-      )
+      params[:ids].each{|i| OutfitItem.create( outfit_id: outfit.id, item_id: i)}
     end
     render json: outfit.to_json
   end
