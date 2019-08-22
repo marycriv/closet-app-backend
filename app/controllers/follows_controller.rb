@@ -1,5 +1,5 @@
 class FollowsController < ApplicationController
-  
+
   skip_before_action :verify_authenticity_token
 
   def index
@@ -29,6 +29,11 @@ class FollowsController < ApplicationController
     follow = Follow.find(params[:id])
     follow.update(follow_params)
     render json: follow.to_json
+  end
+
+  def destroy
+    follow = Follow.find(params[:id])
+    follow.destroy
   end
 
   private
